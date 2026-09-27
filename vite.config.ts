@@ -4,14 +4,14 @@ import path from 'path'
 
 export default defineConfig({
   plugins: [react()],
-    base: '/dynamic-cube',
-    resolve: {
-      alias: {
-        '#': path.resolve(import.meta.dirname, './src'),
-      },
+  base: '/dynamic-cube',
+  resolve: {
+    alias: {
+      '#': path.resolve(import.meta.dirname, './src'),
     },
-    server: {
-      host: 'localhost',
-      port: 60000,
-    }
+  },
+  server: {
+    host: 'localhost',
+    port: 60000,
+  }
 })
