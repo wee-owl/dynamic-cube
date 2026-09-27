@@ -1,26 +1,24 @@
-import { Canvas } from "@react-three/fiber";
-import Container from "./Components/Container/Container";
-import CameraController from "./Components/OrbitController/OrbitController";
-import Cube from "./Components/Cube/Cube";
-import "./App.css";
+import { Route, Routes } from "react-router"
+import { Container } from "./Components/Container/Container"
+import { CubeWrapper } from "./Components/CubeWrapper/CubeWrapper"
+import { SidePage } from "./Components/SidePage/SidePage"
+import "./App.css"
 
 
-function App() {
+export const App = () => {
+
+
   return (
     <>
       <h1 className="title">Dynamic cube</h1>
       <Container>
-        <div className="cube-wrapper">
-          <Canvas camera={{ position: [5, 5, 5], fov: 25 }}>
-            <ambientLight intensity={1} />
-            <directionalLight position={[1, 1, 1]} />
-            <CameraController />
-            <Cube />
-          </Canvas>
-        </div>
+        <Routes>
+          <Route path='/dynamic-cube'>
+            <Route path='' element={<CubeWrapper />} />
+            <Route path='side/id/*' element={<SidePage />} />
+          </Route>
+        </Routes>
       </Container>
     </>
-  );
+  )
 }
-
-export default App;

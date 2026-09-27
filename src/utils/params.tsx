@@ -1,28 +1,29 @@
-const cubeSideParams = [
+import { ICubeSide } from "#/types/general"
+
+
+export const cubeSideParams: ICubeSide[] = [
   {
     color: "#00FF00",
-    text: "сторона 1",
+    text: "Cторона 1",
   },
   {
     color: "#FF0000",
-    text: "сторона 2",
+    text: "Cторона 2",
   },
   {
     color: "#0000FF",
-    text: "сторона 3",
+    text: "Cторона 3",
   },
   {
     color: "#FFFF00",
-    text: "сторона 4",
+    text: "Cторона 4",
   },
   {
     color: "#FF00FF",
-    text: "сторона 5",
+    text: "Cторона 5",
   },
   {
     color: "#00FFFF",
-    text: "сторона 6",
+    text: "Cторона 6",
   },
 ]
-
-export default cubeSideParams;
